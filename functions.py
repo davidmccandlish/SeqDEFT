@@ -248,7 +248,7 @@ def construct_D_spectrum():
         for p in range(P):
             Lambda_k *= lambda_k - p * alpha
         m_k = comb(l,k) * (alpha-1)**k
-        D_eig_vals[k], D_multis[k] = Lambda_k, m_k
+        D_eig_vals[k], D_multis[k] = Lambda_k/factorial(P), m_k
 
     if time_it:
         print('%.2f sec' % (time.perf_counter() - start_time))
@@ -290,7 +290,7 @@ def import_data(path, coding_dict, ignore_sites=None):
     data_dict = {'N': int(N), 'R': R}
 
     # Return
-    return data_dict
+    return data_dict, df
 
 
 #
