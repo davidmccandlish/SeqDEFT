@@ -290,7 +290,7 @@ def import_data(path, coding_dict, ignore_sites=None):
     data_dict = {'N': int(N), 'R': R}
 
     # Return
-    return data_dict, df
+    return data_dict
 
 
 #
